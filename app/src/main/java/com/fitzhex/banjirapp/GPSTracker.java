@@ -193,7 +193,7 @@ public class GPSTracker extends Service implements LocationListener {
     @Override
     public void onLocationChanged(Location location) {
         //get latest location
-        LatLng loc = new LatLng(getLatitude(), getLongitude());
+        LatLng loc = new LatLng(location.getLatitude(), location.getLongitude());
 
         MapsActivity m = new MapsActivity();
         m.updateMarker(mMap, loc);
